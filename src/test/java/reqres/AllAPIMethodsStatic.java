@@ -13,12 +13,20 @@ import io.restassured.response.Response;
 public class AllAPIMethodsStatic {
 //	@Test(priority=3)
 	void getUsersDataStatusCode() {
-		given().get("https://reqres.in/api/users?page=2").then().statusCode(200).log().all();
+		given()
+			.get("https://reqres.in/api/users?page=2")
+		.then()
+			.statusCode(200)
+			.log().all();
 	}
+
 //	
 //	@Test
 	void getDataByID() {
-		given().get("https://reqres.in/api/users?page=2").then().body("data.id[2]", equalTo(9));
+		given()
+			.get("https://reqres.in/api/users?page=2")
+		.then()
+			.body("data.id[2]", equalTo(9));
 	}
 
 //	@Test(priority = 1)
@@ -26,47 +34,49 @@ public class AllAPIMethodsStatic {
 		JSONObject obj = new JSONObject();
 		obj.put("name", "venug");
 		obj.put("job", "testerg");
-		given().body(obj.toJSONString()).when().post("https://reqres.in/api/users").then().statusCode(201);
+		given()
+			.body(obj.toJSONString())
+		.when()
+			.post("https://reqres.in/api/users")
+		.then()
+			.statusCode(201);
 	}
 
 //	@Test(priority = 2)
 	void PutUserData() {
 		JSONObject obj = new JSONObject();
-		
+
 		obj.put("name", "venuag");
 		obj.put("job", "testerg");
-		given().
-			header("content-type", "application/json").
-			contentType(ContentType.JSON).
-			accept(ContentType.JSON).
-			body(obj.toJSONString()).
-		when().
-			post("https://reqres.in/api/users/2").
-		then().
-			statusCode(201).log().all();
+		given()
+			.header("content-type", "application/json")
+			.contentType(ContentType.JSON)
+			.accept(ContentType.JSON)
+			.body(obj.toJSONString())
+		.when()
+			.post("https://reqres.in/api/users/2")
+		.then()
+			.statusCode(201).log().all();
 	}
-	
+
 //	@Test(priority = 3)
-	void PatchUserData() {		// patch is for again update like put
+	void PatchUserData() { // patch is for again update like put but for partial data update
 		JSONObject obj = new JSONObject();
-		
+
 		obj.put("name", "venuag");
 		obj.put("job", "testerg");
-		given().
-			header("content-type", "application/json").
-			contentType(ContentType.JSON).
-			accept(ContentType.JSON).
-			body(obj.toJSONString()).
-		when().
-			post("https://reqres.in/api/users/2").
-		then().
-			statusCode(201).log().all();
+		given()
+			.header("content-type", "application/json")
+			.contentType(ContentType.JSON)
+			.accept(ContentType.JSON)
+			.body(obj.toJSONString())
+		.when()
+			.post("https://reqres.in/api/users/2")
+		.then()
+			.statusCode(201)
+			.log().all();
 	}
-	
-	
-	
-	
-	
+
 	@Test(priority = 2)
 	void test_get() {
 		Response res = RestAssured.get("https://reqres.in/api/users/2");
@@ -78,7 +88,5 @@ public class AllAPIMethodsStatic {
 		System.out.println(res.print());
 
 	}
-	
-	
 
 }

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-14T17:53:57 IST" name="Failed suite [Default suite]" finished-at="2021-12-14T17:53:57 IST" duration-ms="54">
+  <suite started-at="2021-12-22T19:37:15 IST" name="Default suite" finished-at="2021-12-22T19:37:21 IST" duration-ms="5467">
     <groups>
     </groups>
-    <test started-at="2021-12-14T17:53:57 IST" name="Default test(failed)" finished-at="2021-12-14T17:53:57 IST" duration-ms="54">
-      <class name="SeleniumTest">
-        <test-method signature="test2()[pri:0, instance:SeleniumTest@169e6180]" started-at="2021-12-14T17:53:57 IST" name="test2" finished-at="2021-12-14T17:53:57 IST" duration-ms="8" status="PASS">
+    <test started-at="2021-12-22T19:37:15 IST" name="Default test" finished-at="2021-12-22T19:37:21 IST" duration-ms="5467">
+      <class name="heroku.GenerateToken">
+        <test-method signature="basicAuth()[pri:0, instance:heroku.GenerateToken@6f0ca692]" started-at="2021-12-22T19:37:15 IST" name="basicAuth" finished-at="2021-12-22T19:37:18 IST" duration-ms="2983" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test2 -->
-      </class> <!-- SeleniumTest -->
-    </test> <!-- Default test(failed) -->
-  </suite> <!-- Failed suite [Default suite] -->
+        </test-method> <!-- basicAuth -->
+        <test-method signature="basicPreEmptiveAuth()[pri:0, instance:heroku.GenerateToken@6f0ca692]" started-at="2021-12-22T19:37:18 IST" name="basicPreEmptiveAuth" finished-at="2021-12-22T19:37:20 IST" duration-ms="1302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicPreEmptiveAuth -->
+        <test-method signature="generateToken()[pri:0, instance:heroku.GenerateToken@6f0ca692]" started-at="2021-12-22T19:37:20 IST" name="generateToken" finished-at="2021-12-22T19:37:21 IST" duration-ms="1145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateToken -->
+      </class> <!-- heroku.GenerateToken -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

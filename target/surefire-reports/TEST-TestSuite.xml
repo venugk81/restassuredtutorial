@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="TestSuite" time="21.265" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="TestSuite" time="12.839" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.10+8-LTS-162"/>
@@ -26,9 +26,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\gopiv\auto\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5281070708999555096.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\gopiv\auto\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4354606875604957596.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_211/bin/server;C:/Program Files/Java/jre1.8.0_211/bin;C:/Program Files/Java/jre1.8.0_211/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Users\gopiv\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\gopiv\AppData\Local\Programs\Python\Python38-32\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.3\bin;;C:\Users\gopiv\AppData\Local\Microsoft\WindowsApps;C:\Users\gopiv\AppData\Roaming\npm;C:\eclipse\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_211/bin/server;C:/Program Files/Java/jre1.8.0_211/bin;C:/Program Files/Java/jre1.8.0_211/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\gopiv\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\gopiv\AppData\Local\Programs\Python\Python38-32\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2019.3.3\bin;;C:\Users\gopiv\AppData\Local\Microsoft\WindowsApps;C:\Users\gopiv\AppData\Roaming\npm;C:\eclipse\eclipse;;."/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,7 +61,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="reqres.TestNGDataProvider" name="ActualTest" time="0.004"/>
+  <testcase classname="reqres.TestNGDataProvider" name="ActualTest" time="0.007"/>
   <testcase classname="reqres.TestNGDataProvider" name="ActualTest" time="0"/>
-  <testcase classname="SeleniumTest" name="test" time="21.261"/>
+  <testcase classname="SeleniumTest" name="test" time="12.832"/>
+  <testcase classname="SeleniumTest" name="test2" time="0"/>
 </testsuite>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-08T20:32:11 IST" name="Command line suite" finished-at="2021-12-08T20:32:32 IST" duration-ms="21305">
+  <suite started-at="2021-12-20T11:41:35 IST" name="Command line suite" finished-at="2021-12-20T11:41:48 IST" duration-ms="12879">
     <groups>
     </groups>
-    <test started-at="2021-12-08T20:32:11 IST" name="Command line test" finished-at="2021-12-08T20:32:32 IST" duration-ms="21305">
+    <test started-at="2021-12-20T11:41:35 IST" name="Command line test" finished-at="2021-12-20T11:41:48 IST" duration-ms="12879">
       <class name="reqres.TestNGDataProvider">
-        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@5fe94a96]" started-at="2021-12-08T20:32:11 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-08T20:32:11 IST" duration-ms="3" status="PASS">
+        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@765d7657]" started-at="2021-12-20T11:41:35 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-20T11:41:35 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ActualTest -->
-        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@5fe94a96]" started-at="2021-12-08T20:32:11 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-08T20:32:11 IST" duration-ms="0" status="PASS">
+        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@765d7657]" started-at="2021-12-20T11:41:35 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-20T11:41:35 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,10 +51,14 @@
         </test-method> <!-- ActualTest -->
       </class> <!-- reqres.TestNGDataProvider -->
       <class name="SeleniumTest">
-        <test-method signature="test()[pri:0, instance:SeleniumTest@6c6cb480]" started-at="2021-12-08T20:32:11 IST" name="test" finished-at="2021-12-08T20:32:32 IST" duration-ms="21260" status="PASS">
+        <test-method signature="test()[pri:0, instance:SeleniumTest@c730b35]" started-at="2021-12-20T11:41:35 IST" name="test" finished-at="2021-12-20T11:41:48 IST" duration-ms="12831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
+        <test-method signature="test2()[pri:0, instance:SeleniumTest@c730b35]" started-at="2021-12-20T11:41:48 IST" name="test2" finished-at="2021-12-20T11:41:48 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
       </class> <!-- SeleniumTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->

@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -46,6 +48,7 @@ public class GetTesting {
 		
 	}
 	
+	//Set default parser to json..
 	public Response doGetRequest() {	
 		RestAssured.defaultParser = Parser.JSON;
 		return 
@@ -63,7 +66,7 @@ public class GetTesting {
 		.then()
 		.body("public_gists_url", containsString("public"));
 		
-		//Response res = RestAssured.get("https://reqres.in/api/users?page=2");
+		//Response res = RestAssured.get("https://reqres.in/api/users?page=2");you
 //		System.out.println(res.getHeaders().asList());
 		
 //		System.out.println(res.asPrettyString());
@@ -76,6 +79,20 @@ public class GetTesting {
 		.then()
 		.body("following_url[0]", containsString("other"))
 		.body("url[0]", containsString("mojombo"));
+		
+		
+		//Not hamcrest.. Just extracting headers.. from response.. 
+		System.out.println("Response headers example: ===============================");
+		Response res= RestAssured.get("https://api.github.com/users").then().statusCode(200).extract().response();
+		Headers headers = res.getHeaders();
+		for(Header header: headers) {
+			System.out.println(header);
+		}
+				
+		System.out.println("=============\n Link from headers using getHeaders: " + headers.getValue("Link"));
+		System.out.println("=============\n Link from headers using getHeader from response: " + res.getHeader("Link"));
+		
+		
 		
 		
 		
