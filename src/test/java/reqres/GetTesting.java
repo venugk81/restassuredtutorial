@@ -93,7 +93,11 @@ public class GetTesting {
 		System.out.println("=============\n Link from headers using getHeader from response: " + res.getHeader("Link"));
 		
 		
-		
+		Response response= RestAssured.get("https://api.github.com");
+		JsonPath jp = JsonPath.from(res.asInputStream());
+//		JsonPath jp = res.jsonPath();
+		System.out.println("***************following_url[0]********************");
+		System.out.println(jp.getString("following_url[0]"));
 		
 		
 	}

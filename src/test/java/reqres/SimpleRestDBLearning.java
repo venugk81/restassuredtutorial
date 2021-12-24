@@ -34,7 +34,7 @@ public class SimpleRestDBLearning {
 	void addUserData() {
 		JSONObject jsonObj = new JSONObject();
 		jsonObj.put("firstName", "Aditya");
-		jsonObj.put("lastName", "IK");
+		jsonObj.put("lastName", "J");
 		jsonObj.put("subjectId", 3);			
 		given().
 			contentType(ContentType.JSON).accept(ContentType.JSON).
@@ -50,7 +50,7 @@ public class SimpleRestDBLearning {
 	void updateUserData() {
 		JSONObject jsonObj = new JSONObject();	
 		jsonObj.put("firstName", "Aditya");
-//		jsonObj.put("lastName", "IK");
+//		jsonObj.put("lastName", "I");
 		jsonObj.put("subjectId", 2);				
 		given().
 			contentType(ContentType.JSON).accept(ContentType.JSON).
@@ -146,7 +146,7 @@ public class SimpleRestDBLearning {
 	public void printJSONObject() {
 		JSONObject jsonObj = new JSONObject();	
 		jsonObj.put("firstName", "Aditya");
-//		jsonObj.put("lastName", "IK");
+//		jsonObj.put("lastName", "I");
 		jsonObj.put("subjectId", 2);				
 		System.out.println("============000=================");
 		System.out.println(jsonObj.toJSONString());

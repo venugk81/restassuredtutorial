@@ -83,6 +83,8 @@ public class ValidateBody {
 
 		// Get values using JSON Path
 		JsonPath jp = response.jsonPath();
+		////////////////////OR
+		//JsonPath jp1= JsonPath.from(response.toString());
 	
 		System.out.println("jp.get(\"firstName\"): " + jp.get("firstName")); // this is an array
 

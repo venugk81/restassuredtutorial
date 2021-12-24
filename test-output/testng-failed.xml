@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="heroku.GenerateToken">
+      <class name="reqres.GetTesting">
         <methods>
-          <include name="authentication"/>
+          <include name="usingHamCrestValidations"/>
         </methods>
-      </class> <!-- heroku.GenerateToken -->
+      </class> <!-- reqres.GetTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
