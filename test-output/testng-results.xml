@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-24T11:25:52 IST" name="Default suite" finished-at="2021-12-24T11:25:56 IST" duration-ms="4125">
+  <suite started-at="2021-12-28T20:33:48 IST" name="Default suite" finished-at="2021-12-28T20:33:51 IST" duration-ms="3362">
     <groups>
     </groups>
-    <test started-at="2021-12-24T11:25:52 IST" name="Default test" finished-at="2021-12-24T11:25:56 IST" duration-ms="4125">
-      <class name="reqres.GetTesting">
-        <test-method signature="usingHamCrestValidations()[pri:0, instance:reqres.GetTesting@169e6180]" started-at="2021-12-24T11:25:52 IST" name="usingHamCrestValidations" finished-at="2021-12-24T11:25:56 IST" duration-ms="4077" status="PASS">
+    <test started-at="2021-12-28T20:33:48 IST" name="Default test" finished-at="2021-12-28T20:33:51 IST" duration-ms="3362">
+      <class name="finaltests.UsingGlobalReqSpecAndGlobalConfigs">
+        <test-method signature="setbothSpecsAndRun()[pri:0, instance:finaltests.UsingGlobalReqSpecAndGlobalConfigs@32ee6fee]" started-at="2021-12-28T20:33:48 IST" name="setbothSpecsAndRun" finished-at="2021-12-28T20:33:51 IST" duration-ms="3296" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- usingHamCrestValidations -->
-      </class> <!-- reqres.GetTesting -->
+        </test-method> <!-- setbothSpecsAndRun -->
+      </class> <!-- finaltests.UsingGlobalReqSpecAndGlobalConfigs -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
