@@ -1,0 +1,82 @@
+{
+	"employees": {
+		"employee": [
+			{
+				"id": 1,
+				"firstName": "Tom",
+				"lastName": "Cruise",
+				"active": "A",
+				"married": false,
+				"salary": 20.5,
+				"address": [
+					{
+						"addressType": "temp",
+						"Street": "HNO 56465, Tarnaka, Hyderabad",
+						"Landmark": "pious college",
+						"City": "Hyderabad",
+						"State": "Telangana",
+						"pincode": "40001"
+					},
+					{
+						"addressType": "permanent",
+						"Street": "HNO 15/1, warangal, Hyderabad",
+						"Landmark": "1000 pillars temple",
+						"City": "Warangal",
+						"State": "Telangana",
+						"pincode": "50001"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"firstName": "Maria",
+				"lastName": "Sharapova",
+				"active": "T",
+				"salary": 27.5,
+				"address": [
+					{
+						"addressType": "temp",
+						"Street": "HNO 21, manikonda, Hyderabad",
+						"Landmark": "towers college",
+						"City": "Hyderabad",
+						"State": "Telangana",
+						"pincode": "40002"
+					},
+					{
+						"addressType": "permanent",
+						"Street": "HNO 105, hyder, Hyderabad",
+						"Landmark": "1000 pillars temple",
+						"City": "Warangal",
+						"State": "Telangana",
+						"pincode": "50002"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"firstName": "James",
+				"lastName": "Bond",
+				"active": "L",
+				"salary": 15.2,
+				"address": [
+					{
+						"addressType": "temp",
+						"Street": "HNO 356, Tarnaka, Hyderabad",
+						"Landmark": "pious college",
+						"City": "karimnagar",
+						"State": "Telangana",
+						"pincode": "40003"
+					},
+					{
+						"addressType": "permanent",
+						"Street": "HNO 989, warangal, Hyderabad",
+						"Landmark": "1000 pillars temple",
+						"City": "hanumakonda",
+						"State": "Telangana",
+						"pincode": "50003"
+					}
+				]
+			}
+		]
+	}
+}

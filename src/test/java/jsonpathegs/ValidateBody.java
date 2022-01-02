@@ -14,7 +14,7 @@ import org.json.simple.JSONArray;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.jayway.jsonpath.Filter;
+//import com.jayway.jsonpath.Filter;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -68,8 +68,9 @@ public class ValidateBody {
 
 //	@Test
 	public void getUserDetailsByName() throws ParseException {
-		httpRequest = RestAssured.given().contentType(ContentType.JSON).accept(ContentType.JSON).header("Content-Type",
-				"application/json");
+		httpRequest = RestAssured.given()
+				.contentType(ContentType.JSON)
+				.accept(ContentType.JSON).header("Content-Type", "application/json");
 		response = httpRequest.get("/users?firstName=venu");
 		System.out.println(response.body().asString());
 
@@ -218,7 +219,7 @@ public class ValidateBody {
 		
 	}
 	
-	@Test
+//	@Test
 	public void getReqresData() {
 		httpRequest = RestAssured.given().
 				contentType(ContentType.JSON).
@@ -244,14 +245,13 @@ public class ValidateBody {
 		for (Object ob : data) {			
 			System.out.println("Is obj is JSONObject: "+ (ob instanceof JSONArray));	
 		}
-		
+		System.out.println("response.asString()-----------------");
 		String jsonString = response.asString();
 		Object obj = JSONValue.parse(jsonString);	
-		System.out.print("obj instanceof JSONObject: ");
-		System.out.println(obj instanceof JSONObject);		
 		
+		System.out.println("obj instanceof JSONObject2: "+ (obj instanceof JSONObject));
 		if(obj instanceof JSONObject) {			
-			System.out.println(((JSONObject) obj).get("per_page"));			
+//			System.out.println(((JSONObject) obj).get("per_page"));			
 			
 		}else if(obj instanceof JSONArray) {
 			
@@ -268,9 +268,10 @@ public class ValidateBody {
 		
 		response = httpRequest.get("https://reqres.in/api/users");
 		JsonPath path = response.jsonPath();
-		String s = path.get("data.email");
-		System.out.println(s);
-		System.out.println(path.get("data.email[0]").toString());
+		System.out.println(response.asPrettyString());
+		List<String> s = path.get("data.email");		//get all the email ids into a list.. 
+		System.out.println("Email IDs: "+ s);
+		System.out.println(path.get("First Email ID: data.email[0]").toString());
 		
 		
 		System.out.println("Assert statements.. ");

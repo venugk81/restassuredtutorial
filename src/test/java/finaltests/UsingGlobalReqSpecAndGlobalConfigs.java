@@ -37,7 +37,8 @@ public class UsingGlobalReqSpecAndGlobalConfigs {
 	public void getSpecificUserDetailsByName() {	
 		baseURI = "https://reqres.in/api";
 		given()
-			.get("/users?page=2")
+			.config(ConfigFactory.getDefaultConfig())		// set the config at the test level.. or we can set config in request specification and call specification at test level.
+			.get("/users?page=2")			
 		.then()	
 			.contentType(ContentType.JSON)
 			.statusCode(200)

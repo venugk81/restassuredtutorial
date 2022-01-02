@@ -1,0 +1,48 @@
+[
+	{
+		"empid": 123,
+		"empname": "venu",
+		"is_active": "A",
+		"married": false,
+		"sal": 205.2,
+		"gender": "Male"
+	},
+	{
+		"empid": 127,
+		"empname": "g",
+		"is_active": "A",
+		"married": false,
+		"sal": 10,
+		"gender": "Male"
+	},
+	{
+		"empid": 126,
+		"empname": "kG",
+		"is_active": "A",
+		"married": false,
+		"sal": 11,
+		"gender": "Male"
+	},
+	{
+		"empid": 124,
+		"empname": "Geetha",
+		"is_active": "T",
+		"married": false,
+		"gender": "Female"
+	},
+		{
+		"empid": 128,
+		"empname": "Gayatri",
+		"is_active": "T",
+		"married": false,
+		"gender": "Female"
+	},
+	{
+		"empid": 125,
+		"empname": "Seetha",
+		"is_active": "A",
+		"married": true,
+		"sal": 15,
+		"gender": "Female"
+	}
+]
