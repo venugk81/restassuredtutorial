@@ -26,7 +26,7 @@ public class ValidateSimpleJSONObject {
 			JsonPath jp = new JsonPath(f);
 			System.out.println((Object)jp.get("$"));
 			System.out.println("First name: "+ jp.getString("firstname"));
-			System.out.println(jp.getString("Checkin: "+ "bookingdates.checkin"));
+			System.out.println("Checkin: "+ jp.getString("bookingdates.checkin"));
 			
 		}else {
 			Assert.fail("File doesn't exists: "+ filePath);

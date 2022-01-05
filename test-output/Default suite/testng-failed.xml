@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jsonpatheg.ValidateModerateJSON">
+      <class name="unmarshall.SimpleArrayUnmarshall">
         <methods>
-          <include name="testModerateJSon"/>
+          <include name="simpleObjectMapToJavaClass"/>
         </methods>
-      </class> <!-- jsonpatheg.ValidateModerateJSON -->
+      </class> <!-- unmarshall.SimpleArrayUnmarshall -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

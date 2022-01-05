@@ -24,6 +24,9 @@ public class ValidateModerateJSON {
 			System.out.println("\nGet List (Object)jp.get(\"$\")===========================");
 			System.out.println("\n(Object)jp.get(\"$\"): "+ (Object)jp.get("$"));
 			System.out.println("(Object)jp.get(\"employees.employee\"): "+ (Object)jp.get("employees.employee"));
+			
+			List<Object> employees = jp.get("employees.employee");
+			
 			System.out.println("Get List jp.getList(\"employees.employee\").get(0)===========================");
 			System.out.println("(Object)jp.get(\"employees.employee\").get(0): "+ jp.getList("employees.employee").get(0));
 			System.out.println("Get List employees.employee===========================");

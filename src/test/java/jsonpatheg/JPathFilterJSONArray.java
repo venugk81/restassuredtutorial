@@ -24,6 +24,8 @@ public class JPathFilterJSONArray {
 			
 			//size
 			System.out.println("JSON Array Size: "+jp.getList("").size());
+			
+			System.out.println("Size-----------------: "+ jp.getInt("size()"));
 
 //			get all female employees empname
 			List<String> femaleEmps = jp.getList("findAll{it.gender=='Female'}.empname");

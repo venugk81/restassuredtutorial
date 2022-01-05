@@ -37,9 +37,10 @@ public class SimpleRestDBLearning {
 		jsonObj.put("lastName", "J");
 		jsonObj.put("subjectId", 3);			
 		given().
-			contentType(ContentType.JSON).accept(ContentType.JSON).
-			header("Content-Type", "application/json").
-			body(jsonObj.toJSONString()). 
+			contentType(ContentType.JSON)
+			.accept(ContentType.JSON)
+			.header("Content-Type", "application/json")
+			.body(jsonObj.toJSONString()). 
 		when().
 			post("/users").
 		then().
