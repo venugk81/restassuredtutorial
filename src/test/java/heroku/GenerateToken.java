@@ -82,7 +82,7 @@ public class GenerateToken {
 	@Test
 	public void generateToken() {
 		
-		JSONObject obj = new JSONObject();
+		JSONObject obj = new JSONObject(); 
 		obj.put("username", "admin");
 		obj.put("password", "password123");
 		

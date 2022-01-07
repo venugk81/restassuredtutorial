@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="unmarshall.SimpleArrayUnmarshall">
+      <class name="threadlocalpack.TestClassOne">
         <methods>
-          <include name="simpleObjectMapToJavaClass"/>
+          <include name="validateRecordDetails"/>
+          <include name="generateRecordId"/>
         </methods>
-      </class> <!-- unmarshall.SimpleArrayUnmarshall -->
+      </class> <!-- threadlocalpack.TestClassOne -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

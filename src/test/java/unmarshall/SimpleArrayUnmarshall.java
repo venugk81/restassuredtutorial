@@ -19,12 +19,11 @@ public class SimpleArrayUnmarshall {
 //		TypeRef is used to convert any class to a generic type..
 		//TypeRef allows to convert json resonse to any generic class type
 		Map<String, String> map = (Map<String, String>) lst.get(0);
-		System.out.println(map.get("name"));
-		
+		System.out.println(map.get("name"));		
 		map = (Map<String, String>) lst.get(1);
-		System.out.println(map.get("name"));
-		
+		System.out.println(map.get("name"));		
 	}
+	
 	//Above method is to use Map.class to convert simple json response to Map.
 	/*
 	 [

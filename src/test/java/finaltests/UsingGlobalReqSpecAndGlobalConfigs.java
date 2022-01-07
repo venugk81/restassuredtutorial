@@ -31,13 +31,15 @@ public class UsingGlobalReqSpecAndGlobalConfigs {
 	 */
 	
 	
-	//This example is not configured with request specification and config.. so if it requires to pass headers and other config like url redirects, it has to separately. 
+	//This example is not configured with request specification and config.. 
+	//so if it requires to pass headers and other config like url redirects, it has to separately. 
 	//Instead of all that, we can create global configs and specification and call them as shown in setConfigGlobalEg method... 
 //	@Test			//// no req spec and no config.. 
 	public void getSpecificUserDetailsByName() {	
 		baseURI = "https://reqres.in/api";
 		given()
-			.config(ConfigFactory.getDefaultConfig())		// set the config at the test level.. or we can set config in request specification and call specification at test level.
+			.config(ConfigFactory.getDefaultConfig())		
+			// set the config at the test level.. or we can set config in request specification and call specification at test level.
 			.get("/users?page=2")			
 		.then()	
 			.contentType(ContentType.JSON)
