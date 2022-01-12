@@ -20,7 +20,7 @@ public class ThreadLocalDemo {
 	}
 	
 	public static Object getValue(String key) {
-		return threadDataMap.get().get(key);		
+		return threadDataMap.get().get(key);		  
 	}
 	
 	//This way we can achieve thread safe scripts.. 

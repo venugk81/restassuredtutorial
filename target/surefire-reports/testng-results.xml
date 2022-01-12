@@ -1,65 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-20T11:41:35 IST" name="Command line suite" finished-at="2021-12-20T11:41:48 IST" duration-ms="12879">
+  <suite started-at="2022-01-12T18:14:26 IST" name="Suite" finished-at="2022-01-12T18:14:41 IST" duration-ms="15092">
     <groups>
     </groups>
-    <test started-at="2021-12-20T11:41:35 IST" name="Command line test" finished-at="2021-12-20T11:41:48 IST" duration-ms="12879">
-      <class name="reqres.TestNGDataProvider">
-        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@765d7657]" started-at="2021-12-20T11:41:35 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-20T11:41:35 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Venu]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[G]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[101]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ActualTest -->
-        <test-method signature="ActualTest(java.lang.String,java.lang.String,int)[pri:0, instance:reqres.TestNGDataProvider@765d7657]" started-at="2021-12-20T11:41:35 IST" name="ActualTest" data-provider="userData" finished-at="2021-12-20T11:41:35 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Gopi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[k]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[102]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ActualTest -->
-      </class> <!-- reqres.TestNGDataProvider -->
-      <class name="SeleniumTest">
-        <test-method signature="test()[pri:0, instance:SeleniumTest@c730b35]" started-at="2021-12-20T11:41:35 IST" name="test" finished-at="2021-12-20T11:41:48 IST" duration-ms="12831" status="PASS">
+    <test started-at="2022-01-12T18:14:26 IST" name="Test" finished-at="2022-01-12T18:14:41 IST" duration-ms="15092">
+      <class name="selenium.SeleniumTest">
+        <test-method signature="test()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-12T18:14:26 IST" name="test" finished-at="2022-01-12T18:14:41 IST" duration-ms="15048" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method signature="test2()[pri:0, instance:SeleniumTest@c730b35]" started-at="2021-12-20T11:41:48 IST" name="test2" finished-at="2021-12-20T11:41:48 IST" duration-ms="0" status="PASS">
+        <test-method signature="test2()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-12T18:14:41 IST" name="test2" finished-at="2022-01-12T18:14:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-      </class> <!-- SeleniumTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+      </class> <!-- selenium.SeleniumTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -5,6 +5,10 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -49,7 +53,7 @@ public class GenerateToken {
 		
 	}
 	
-	@Test
+//	@Test
 	public void basicPreEmptiveAuth() {
 		RequestSpecification spec= RestAssured.given()
 				.log().all()
@@ -94,14 +98,23 @@ public class GenerateToken {
 		 * then().extract().response();
 		 */
 		
+//		Map<String, String> obj = new LinkedHashMap<String, String>();
+//		obj.put("username", "admin");
+//		obj.put("password", "password123");
+		
+		
 		///since i static imported RestAssured , i can ignore RestAssured and directly write given().. instead of RestAssured.given()
-		Response res = given()				
+		Response res = given()
+					.log().all()
 					.contentType(ContentType.JSON)
 					.body(obj.toJSONString())
+//					.body(obj)
 					.baseUri("https://restful-booker.herokuapp.com/")
 				.when()
 					.post("auth")
 				.then()
+					.log().all()
+//					.statusCode(200)
 					.extract()
 					.response();
 		System.out.println(res.asPrettyString());

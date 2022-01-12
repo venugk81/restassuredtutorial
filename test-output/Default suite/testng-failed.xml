@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="threadlocalpack.TestClassOne">
+      <class name="basicjava.RegExpNumbers">
         <methods>
-          <include name="validateRecordDetails"/>
-          <include name="generateRecordId"/>
+          <include name="getOnlyNumbers"/>
         </methods>
-      </class> <!-- threadlocalpack.TestClassOne -->
+      </class> <!-- basicjava.RegExpNumbers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

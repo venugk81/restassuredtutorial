@@ -1,10 +1,13 @@
+package selenium;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import junit.framework.Assert;
 
 public class SeleniumTest {
 	
@@ -14,9 +17,16 @@ public class SeleniumTest {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(chromeOptions);		
 		// Navigate to the demoqa website
-		driver.get("https://www.google.com");		
-		driver.close();
-		driver.quit();
+		try {
+			driver.get("https://www.google.com");		
+			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.findElement(By.name("q")).sendKeys("First Jenkins test");
+			Thread.sleep(1000);
+			driver.close();
+			driver.quit();	
+		}catch (Exception e) {
+			e.printStackTrace();
+		}		
 	}
 	
 	@Test
