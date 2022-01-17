@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-12T18:14:26 IST" name="Suite" finished-at="2022-01-12T18:14:41 IST" duration-ms="15092">
+  <suite started-at="2022-01-17T18:06:33 IST" name="Suite" finished-at="2022-01-17T18:06:53 IST" duration-ms="19930">
     <groups>
     </groups>
-    <test started-at="2022-01-12T18:14:26 IST" name="Test" finished-at="2022-01-12T18:14:41 IST" duration-ms="15092">
+    <test started-at="2022-01-17T18:06:33 IST" name="Test" finished-at="2022-01-17T18:06:53 IST" duration-ms="19930">
       <class name="selenium.SeleniumTest">
-        <test-method signature="test()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-12T18:14:26 IST" name="test" finished-at="2022-01-12T18:14:41 IST" duration-ms="15048" status="PASS">
+        <test-method signature="test()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-17T18:06:33 IST" name="test" finished-at="2022-01-17T18:06:53 IST" duration-ms="19871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method signature="test2()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-12T18:14:41 IST" name="test2" finished-at="2022-01-12T18:14:41 IST" duration-ms="0" status="PASS">
+        <test-method signature="test2()[pri:0, instance:selenium.SeleniumTest@2053d869]" started-at="2022-01-17T18:06:53 IST" name="test2" finished-at="2022-01-17T18:06:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
