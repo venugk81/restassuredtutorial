@@ -33,7 +33,7 @@ public class SimpleJSONSchemaValidation {
 		System.out.println(body.asPrettyString());
 		
 //		RestAssured
-//		.given()
+//		.given()-
 //			.get("https://restful-booker.herokuapp.com/booking/1").then().log().all();
 	}
 	
@@ -56,9 +56,10 @@ public class SimpleJSONSchemaValidation {
 		.then()
 			.log().all()
 			.statusCode(200)
-			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("GetBookingsSchema.json"));
+			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("GetBookingsSchema.json"))
+			.extract().body();
 		
-		//In order use file name without full path using matchesJsonSchemaInClasspath method, we need to keep the file "" under src/main/resources
+		//In order to use file name without full path using matchesJsonSchemaInClasspath method, we need to keep the file "" under src/main/resources
 	}
 	
 	@Test

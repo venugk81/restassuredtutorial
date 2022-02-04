@@ -4,13 +4,12 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.TreeMap;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -27,14 +26,16 @@ public class CharCount {
 			if(map.containsKey(String.valueOf(val))) {
 				map.put(String.valueOf(val), 1);
 			}else {
+				
 				int num = map.get(String.valueOf(val));
 				map.put(String.valueOf(val), num+1);
 			}			
 		}
 		System.out.println(map);
+		
 	}
 
-//	@Test
+	@Test
 	public void test() {
 		String s = "abc a xyz b a";
 		System.out.println(s.indexOf("a"));
@@ -58,6 +59,17 @@ public class CharCount {
 		System.out.println(size);
 		
 		System.out.println(map.containsValue(3));
+		
+		int min = Collections.min(map.values());
+		int max = Collections.max(map.values());
+		
+		map.forEach((k,v)-> {
+			if(map.get(k) == min) {
+				System.out.println("Min times repeating character: "+ k + " count: "+ v);
+			}else if(map.get(k) == max) {
+				System.out.println("Min times repeating character: "+ k + " count: "+ v);
+			}			
+		});
 		
 		
 		
@@ -88,7 +100,7 @@ public class CharCount {
 
 	}
 	
-	@Test
+//	@Test
 	public void testArrayCompare() {
 		List<String> l1 = Arrays.asList("venu", "gopi", "g");
 		List<String> l2 = Arrays.asList(new String[] {"venu", "g", "gopi"});
@@ -132,5 +144,37 @@ public class CharCount {
 			 System.out.println(a1);
 		 }
 		 
+	}
+	
+//	@Test
+	public void treemapTest() {
+		TreeMap<String, Integer> tree = new TreeMap<>();
+		tree.put("a", 14);
+		tree.put("h", 1);
+		tree.put("e", 34);
+		tree.put("s", 2);
+		tree.put("l", 1);
+		tree.put("c", 4);
+		System.out.println("TreeMap: "+ tree);
+		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> a = new ArrayList<>(tree.values());
+		System.out.println(a);
+		System.out.println("Min: "+ Collections.min(a));
+		System.out.println("Max: "+ Collections.max(a));
+		
+		System.out.println("====================");
+		Iterator<Map.Entry<String, Integer>> iterator = tree.entrySet().iterator();
+		while(iterator.hasNext()) {
+			Map.Entry<String, Integer> entry = iterator.next();
+			System.out.println(entry.getKey() + " and value is "+ entry.getValue());
+		}
+		System.out.println("====================");
+		tree.keySet().forEach(key -> System.out.println(key + ": "+ tree.get(key)));
+		System.out.println("====================");
+		tree.forEach((k,v)-> System.out.println("Key: "+ k + " and value: "+ v));
+		System.out.println("====================");
+		
+		tree.entrySet().stream().forEach(e -> System.out.println("key: "+ e.getKey() + " value: "+ e.getValue()));
+		System.out.println("====================");
 	}
 }

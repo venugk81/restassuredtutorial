@@ -1,4 +1,5 @@
 package selenium;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -19,7 +20,7 @@ public class SeleniumTest {
 		// Navigate to the demoqa website
 		try {
 			driver.get("https://www.google.com");		
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.findElement(By.name("q")).sendKeys("First Jenkins test");
 			Thread.sleep(1000);
 			driver.close();

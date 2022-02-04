@@ -1,5 +1,4 @@
 package selenium;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,11 @@ public class TC001_UsingReportExtent extends CommonPage{
 			test.assignAuthor("Venu").assignCategory("Sample").assignDevice("Chrome Browser");
 			test.info("Test started");			
 			driver.findElement(By.name("q")).sendKeys("testing");
-			
+			test.info("Test in progress");
+			test.pass("sstep passed 001");
+			test.skip("skipped 001");
+			test.warning("warning 001");
+			test.fail("failed 001");
 	}
 	
 	
