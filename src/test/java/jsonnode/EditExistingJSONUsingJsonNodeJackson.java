@@ -1,6 +1,8 @@
 package jsonnode;
 
 import java.io.File;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 import org.testng.annotations.Test;
 
@@ -114,7 +116,7 @@ public class EditExistingJSONUsingJsonNodeJackson {
 		System.out.println(objectNode.toPrettyString());
 	}
 	
-	@Test
+//	@Test
 	public void parseJsonObjectToReadValues() throws JsonMappingException, JsonProcessingException
 	{
 		String jsonObject = "{\r\n" + 
@@ -168,7 +170,7 @@ public class EditExistingJSONUsingJsonNodeJackson {
 		}
 	}
 	
-	@Test
+//	@Test
 	public void readDataFromJsonFile() {
 		File f = null;
 		try {
@@ -185,6 +187,71 @@ public class EditExistingJSONUsingJsonNodeJackson {
 				
 				String createdNestedJsonObject = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(objectNode);
 				System.out.println("Created plain JSON Object is : \n"+ createdNestedJsonObject);	
+			}else {
+				System.out.println("File is not found");
+			}
+		}catch(Exception oExp) {
+			oExp.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void updateJSONFromFileModerate() {
+		File f = null;
+		try {
+			f = new File(System.getProperty("user.dir")+ "/data/moderateJSON.json");
+			if(f.exists()) {
+				ObjectMapper objectMapper = new ObjectMapper();
+				JsonNode jsonTree = objectMapper.readTree(f);	
+				ObjectNode objectNode = objectMapper.readValue(jsonTree.toString(), ObjectNode.class);
+				objectNode.put("firstname", "Animesh");
+				objectNode.put("depositpaid", "false");
+				System.out.println("Nodes Size: "+ objectNode.at("/employees/employee").size());				
+				
+				System.out.println("sal : "+ objectNode.at("/employees/employee").path(0).get("salary"));		//sal : 20.5
+				System.out.println("---------------------fields-------------");
+				// To get all field names
+				Iterator<String> allFieldNames = objectNode.at("/employees/employee").path(0).fieldNames();
+				while(allFieldNames.hasNext())
+				{
+					System.out.println(allFieldNames.next());
+				}
+				System.out.println("---------------------Values-------------");
+				// To get all field values
+				Iterator<JsonNode> allFieldValues = objectNode.at("/employees/employee").path(0).elements();
+				System.out.println("Fields values are : ");
+				while(allFieldValues.hasNext())
+				{
+					System.out.println(allFieldValues.next());
+				}
+				System.out.println("=======================");
+				// To get all key-value pair
+				Iterator<Entry<String, JsonNode>> allFieldsAndValues = objectNode.fields();
+				System.out.println("All fields and their values are : ");
+				while(allFieldsAndValues.hasNext())
+				{
+					Entry<String, JsonNode> node = allFieldsAndValues.next();
+					System.out.println("Key is : "+node.getKey()+" and its value is : "+node.getValue());
+				}
+				
+				System.out.println("============Key Value pairs===========");
+				Iterator<Entry<String, JsonNode>> allFieldsAndValues1 = objectNode.at("/employ ees/employee").path(0).fields();
+				System.out.println("All fields and their values are : ");
+				while(allFieldsAndValues1.hasNext())
+				{
+					Entry<String, JsonNode> node = allFieldsAndValues1.next();
+					System.out.println("Key is : "+node.getKey()+" and its value is : "+node.getValue());
+				}
+				System.out.println("=======================");
+				ObjectNode node1 = objectMapper.readValue(objectNode.at("/employees/employee").path(0).toString(), ObjectNode.class);
+				node1.put("id", "11111");
+				System.out.println(node1);
+				System.out.println("=======================");
+				
+				
+				
+				String createdNestedJsonObject = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(objectNode);
+				System.out.println("Created createdNestedJsonObject: \n"+ createdNestedJsonObject);	
 			}else {
 				System.out.println("File is not found");
 			}
