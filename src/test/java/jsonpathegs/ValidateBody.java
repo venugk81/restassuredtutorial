@@ -64,6 +64,8 @@ public class ValidateBody {
 		JsonPath jp = response.jsonPath();
 		System.out.println("jp.get(\"firstName\"): " + jp.get("firstName")); // this is an array
 
+//		List<Object> TomDetails = jp.getList("employees.employee.findAll{it.firstName=='Tom'}");
+//		System.out.println("\nTom Details: "+ TomDetails);
 	}
 
 //	@Test
@@ -135,7 +137,7 @@ public class ValidateBody {
 	 * 
 	 */
 //	https://www.youtube.com/watch?v=ZjZqLUGCWxo
-//	@Test
+	@Test
 	public void getAllUserNodes() {
 		httpRequest = RestAssured.given().
 				contentType(ContentType.JSON).
@@ -231,7 +233,8 @@ public class ValidateBody {
 		
 		JsonPath jp = response.jsonPath();
 		System.out.println("Total: "+ jp.getString("total"));		
-		List<Map<String, String>> data =  jp.from(response.asString()).getList("data");		
+		List<Map<String, String>> data =  jp.from(response.asString()).getList("data");	
+		
 		System.out.println("Size data: "+ data.size());	
 		
 		System.out.println(data instanceof JSONObject);
@@ -259,7 +262,7 @@ public class ValidateBody {
 		
 	}
 	
-	@Test
+//	@Test
 	public void jsonPathTest() {
 		httpRequest = RestAssured.given().
 				contentType(ContentType.JSON).
