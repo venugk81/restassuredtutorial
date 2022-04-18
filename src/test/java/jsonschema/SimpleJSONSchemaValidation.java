@@ -5,11 +5,8 @@ package jsonschema;
 import java.io.File;
 
 import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
-import io.opentelemetry.sdk.logs.data.Body;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;

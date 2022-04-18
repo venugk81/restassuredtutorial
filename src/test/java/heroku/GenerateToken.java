@@ -62,7 +62,7 @@ public class GenerateToken {
 				.basic("postman", "password");
 		Response res = spec.get("https://postman-echo.com/basic-auth")
 				.then()
-				.log().all()
+					.log().all()
 				.extract()
 				.response();
 		System.out.println(res.asPrettyString());
@@ -110,6 +110,7 @@ public class GenerateToken {
 					.body(obj.toJSONString())
 //					.body(obj)
 					.baseUri("https://restful-booker.herokuapp.com/")
+					
 				.when()
 					.post("auth")
 				.then()

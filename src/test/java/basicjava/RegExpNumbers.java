@@ -32,10 +32,10 @@ public class RegExpNumbers {
 		
 		
 
-			while(matcher.find()) {
-				nu = nu + matcher.group();	
-			}
-		
+		while(matcher.find()) {
+			nu = nu + matcher.group();	
+		}
+	
 		System.out.println(nu);
 		
 		

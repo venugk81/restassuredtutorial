@@ -85,13 +85,13 @@ public class CharCount {
 
 	        for (int j = 0; j < s.length(); j++) {
 
-	            if(s.charAt(i)==s.charAt(j))
+	            if(s.charAt(i) == s.charAt(j))
 	            {
 	                distinct++;
 
 	            }
 	        }   
-	        System.out.println(s.charAt(i)+"--"+distinct);
+	        System.out.println(s.charAt(i)+"--"+ distinct);
 	        String d=String.valueOf(s.charAt(i)).trim();
 	        s=s.replaceAll(d,"");
 	        distinct = 0;
